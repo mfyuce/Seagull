@@ -4,7 +4,7 @@ build:
 
 .PHONY: run
 run:
-	docker run -p 3868:3868 -v /home/netas/projects/scef-test/seagull/diameter/logs:/opt/seagull/diameter/logs -v /home/netas/projects/scef-test/seagull/config/:/opt/seagull/config -v /home/netas/projects/scef-test/diameter:/opt/seagull/diameter -i -t --rm --detach --name seagull-ubuntu1804 localhost/seagull:ubuntu1804 /bin/bash || :
+	docker run -p 3868:3868 -p 3891:3891  -v /home/netas/projects/scef-test/seagull/diameter/logs:/opt/seagull/diameter/logs -v /home/netas/projects/scef-test/seagull/config/:/opt/seagull/config -v /home/netas/projects/scef-test/seagull/diameter:/opt/seagull/diameter -i -t --rm --detach --name seagull-ubuntu1804 localhost/seagull:ubuntu1804 /bin/bash || :
 
 .PHONY: exec
 exec:
